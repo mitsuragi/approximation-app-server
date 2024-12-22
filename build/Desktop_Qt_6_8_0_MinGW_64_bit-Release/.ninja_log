@@ -1,0 +1,8 @@
+# ninja log v6
+5	305	7561724078486181	server_autogen/timestamp	4a1b816abdd1dc7b
+5	305	7561724078486181	server_autogen/mocs_compilation.cpp	4a1b816abdd1dc7b
+5	305	7561724078486181	D:/QtProjects/client-server-approximation/server/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/server_autogen/mocs_compilation.cpp	4a1b816abdd1dc7b
+5	305	7561724078486181	D:/QtProjects/client-server-approximation/server/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/server_autogen/timestamp	4a1b816abdd1dc7b
+307	371	7561724079234182	CMakeFiles/server.dir/server_autogen/mocs_compilation.cpp.obj	c7444dc11e8b9b81
+311	2579	7561724079264125	CMakeFiles/server.dir/main.cpp.obj	40dacdffda668f6f
+2585	2812	7561724102003673	server.exe	9dbb69f2473cd01c
