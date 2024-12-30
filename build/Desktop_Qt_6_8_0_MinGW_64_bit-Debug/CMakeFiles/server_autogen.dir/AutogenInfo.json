@@ -171,7 +171,8 @@
 		"D:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
 		"D:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
 		"D:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
-		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
+		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake",
+		"D:/QtProjects/client-server-approximation/server/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/QtProjects/client-server-approximation/server",
 	"CROSS_CONFIG" : false,

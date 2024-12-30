@@ -14,6 +14,7 @@ private:
     QTcpSocket *clientSocket;
     std::vector<double> concentrationVector;
     std::vector<double> levelVector;
+    std::vector<double> consumptionVector;
 
     void initServer();
     void getDataFromClient();

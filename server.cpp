@@ -1,6 +1,7 @@
 #include "server.h"
 
 #include <iostream>
+#include <QFile>
 #include <QString>
 #include <QDataStream>
 #include <QIODevice>
@@ -18,13 +19,22 @@ void vectorOutput(const std::vector<double>& x) {
 }
 
 void Server::initServer() {
-    if (!this->listen(QHostAddress::Any, 8010)) {
+    QFile file(":/configserver/config.txt");
+    file.open(QIODevice::ReadOnly);
+
+    QTextStream out(&file);
+
+    QHostAddress adress(out.readLine());
+    int host = out.readLine().toInt();
+
+    if (!this->listen(adress, host)) {
         std::cerr << "Unable to start the server: " << this->errorString().toStdString() << std::endl;
         return;
     }
 
-    QString ipAddress = QHostAddress(QHostAddress::LocalHost).toString();
-    std::cout << "The server is running on IP: " << ipAddress.toStdString() << "; Port: " << this->serverPort() << std::endl;
+    std::cout << "The server is running on IP: " << adress.toString().toStdString() << "; Port: " << this->serverPort() << std::endl;
+
+    file.close();
 }
 
 void Server::incomingConnection(qintptr socketDescriptor) {
@@ -54,7 +64,14 @@ void Server::slotReadyRead() {
             return;
         }
 
-        int concSize, levelSize;
+        int concSize, levelSize, consumSize;
+
+        in >> consumSize;
+        for (int i = 0; i < consumSize; i++) {
+            double value;
+            in >> value;
+            consumptionVector.push_back(value);
+        }
 
         in >> concSize;
         for (int i = 0; i < concSize; i++) {
@@ -70,6 +87,8 @@ void Server::slotReadyRead() {
             levelVector.push_back(value);
         }
 
+        std::cout << "Received consumtion vector: ";
+        vectorOutput(consumptionVector);
         std::cout << "Received concentration vector: ";
         vectorOutput(concentrationVector);
         std::cout << "Reveived level vector: ";
@@ -77,11 +96,11 @@ void Server::slotReadyRead() {
 
         std::cout << "Calculation..." << std::endl;
 
-        std::vector<double> coeffsConc = linearApproximation(concentrationVector);
+        std::vector<double> coeffsConc = linearApproximation(consumptionVector, concentrationVector);
         std::cout << "Concentration coefficients: ";
         vectorOutput(coeffsConc);
 
-        std::vector<double> coeffsLevel = linearApproximation(levelVector);
+        std::vector<double> coeffsLevel = linearApproximation(consumptionVector, levelVector);
         std::cout << "Level coefficients: ";
         vectorOutput(coeffsLevel);
 

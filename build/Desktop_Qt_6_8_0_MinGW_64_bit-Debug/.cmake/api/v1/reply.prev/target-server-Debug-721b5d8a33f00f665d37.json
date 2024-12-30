@@ -38,25 +38,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 18,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 35,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 30,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 16,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
@@ -118,7 +118,7 @@
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 26,
+				"line" : 15,
 				"parent" : 0
 			}
 		]
@@ -129,7 +129,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always"
+					"fragment" : "-DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always"
 				}
 			],
 			"defines" : 
@@ -145,10 +145,6 @@
 				{
 					"backtrace" : 3,
 					"define" : "QT_NETWORK_LIB"
-				},
-				{
-					"backtrace" : 3,
-					"define" : "QT_NO_DEBUG"
 				},
 				{
 					"backtrace" : 3,
@@ -179,11 +175,11 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "D:/QtProjects/client-server-approximation/server/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/server_autogen/include"
+					"path" : "D:/QtProjects/client-server-approximation/server/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/server_autogen/include"
 				},
 				{
 					"backtrace" : 16,
-					"path" : "D:/QtProjects/client-server-approximation/server/INCLUDE_PATH"
+					"path" : "D:/QtProjects/client-server-approximation/server/lib/include"
 				},
 				{
 					"backtrace" : 3,
@@ -220,7 +216,8 @@
 			[
 				0,
 				1,
-				3
+				3,
+				6
 			]
 		}
 	],
@@ -254,7 +251,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-O3 -DNDEBUG",
+				"fragment" : "-DQT_QML_DEBUG -g",
 				"role" : "flags"
 			},
 			{
@@ -268,7 +265,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "MYLIB-NOTFOUND",
+				"fragment" : "D:\\QtProjects\\client-server-approximation\\server\\lib\\libgraphfunctions.dll.a",
 				"role" : "libraries"
 			},
 			{
@@ -313,7 +310,8 @@
 			[
 				0,
 				1,
-				3
+				3,
+				6
 			]
 		},
 		{
@@ -327,14 +325,16 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				4
+				4,
+				5
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				5
+				7,
+				8
 			]
 		}
 	],
@@ -344,7 +344,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/server_autogen/mocs_compilation.cpp",
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/server_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -365,15 +365,33 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/server_autogen/timestamp",
+			"backtrace" : 1,
+			"path" : "resources.qrc",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/server_autogen/timestamp.rule",
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/server_autogen/timestamp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/server_autogen/EWIEGA46WW/qrc_resources.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/server_autogen/timestamp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/server_autogen/EWIEGA46WW/qrc_resources.cpp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

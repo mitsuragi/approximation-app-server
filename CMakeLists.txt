@@ -21,6 +21,8 @@ add_executable(server
   main.cpp
   server.h
   server.cpp
+  resources.qrc
+
 )
 
 target_link_libraries(server Qt${QT_VERSION_MAJOR}::Core
